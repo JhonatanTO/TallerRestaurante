@@ -6,16 +6,13 @@
     --danger: #e74c3c;
     --warning: #f39c12;
     --success: #27ae60;
-    --background: #f0f2f5;
-    --card-bg: #ffffff;
-    --text: #2d3436;
-    --text-light: #636e72;
-    --border: #dfe6e9;
-    --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.12);
-    --radius: 12px;
-    --radius-sm: 8px;
-    --transition: all 0.25s ease;
+    --background: #1a1a2e; /* Cambiado a negro oscuro */
+    --card-bg: #22223b; /* Cambiado a un color más oscuro */
+    --text: #ffffff; /* Cambiado a blanco para mejorar la legibilidad en fondo negro */
+    --text-light: #999999; /* Cambiado a gris claro para contraste */
+    --border: #555563; /* Cambiado a un color más oscuro */
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.7); /* Ajustado el valor de opacidad del sombreado */
+    --shadow-light: 0 2px 8px rgba(255, 255, 255, 0.3); /* Cambiado a blanco con opacidad más baja para el modo oscuro */
 }
 
 * {
@@ -163,15 +160,8 @@ body {
 }
 
 .header {
-    background: white;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    background: var(--secondary);
+    color: var(--text);
 }
 
 .menu-toggle {
@@ -275,13 +265,9 @@ body {
 }
 
 .stat-card {
-    background: white;
-    padding: 1.25rem;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    background: var(--card-bg);
+    border-color: var(--border);
+    color: var(--text-light);
 }
 
 .stat-icon {
@@ -302,7 +288,6 @@ body {
 .stat-value {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--secondary);
 }
 
 .stat-label {
@@ -556,7 +541,8 @@ body {
 
 /* CART PANEL */
 .cart-panel {
-    background: white;
+    background: var(--card-bg);
+    border-color: var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     display: flex;
@@ -727,7 +713,7 @@ body {
 }
 
 .reservas-list {
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 1rem;
@@ -783,7 +769,7 @@ body {
 }
 
 .reservas-calendar {
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 1rem;
@@ -944,7 +930,7 @@ body {
 }
 
 .facturas-list {
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 1rem;
@@ -958,7 +944,7 @@ body {
 }
 
 .summary-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 1.25rem;
@@ -983,7 +969,7 @@ body {
 }
 
 .report-content {
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 1.5rem;
@@ -1021,7 +1007,7 @@ body {
 
 /* CLIENTES MODULE */
 .clientes-table-container {
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     overflow: hidden;
@@ -1035,7 +1021,7 @@ body {
     gap: 1rem;
     margin-top: 1rem;
     padding: 1rem;
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
@@ -1135,18 +1121,12 @@ body {
 }
 
 .modal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.8); /* Cambiado la opacidad del overlay del modal */
 }
 
 .modal-container {
     position: relative;
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius);
     width: 100%;
     max-width: 450px;
@@ -1335,10 +1315,11 @@ body {
 .toast.show {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ajustado el valor de opacidad del sombreado */
 }
 
 .toast i {
-    color: var(--success);
+    color: #ff6b35; /* Cambiado a la color primario para el icono en modo oscuro */
 }
 
 /* RESPONSIVE */
@@ -1352,8 +1333,8 @@ body {
     }
     
     .cart-panel {
-        position: relative;
-        top: 0;
+        background: var(--card-bg);
+        border-color: var(--border);
     }
 }
 
